@@ -4,12 +4,14 @@ import LoginValidation from "../utils/LoginValidation";
 import { createUserWithEmailAndPassword,signInWithEmailAndPassword } from "firebase/auth";
 import {auth} from '../utils/firebase'
 
+
 const Login = () => {
   const [isSignedIn, setIsSignedIn] = useState(true);
   const [iserrorMessage,setIsErrorMessage] = useState(null)
   const email = useRef(null);
   const password = useRef(null);
   const name = useRef(null);
+ 
   
   const HandleSubmit = (e) => {
     const message = LoginValidation(email.current.value,password.current.value);
@@ -22,7 +24,7 @@ const Login = () => {
     .then((userCredential) => {
       // Signed up 
       const user = userCredential.user;
-      console.log(user)
+      // navigate('/browse')
     })
     .catch((error) => {
       const errorCode = error.code;
@@ -34,7 +36,7 @@ const Login = () => {
     .then((userCredential) => {
       // Signed in 
       const user = userCredential.user;
-      console.log(user)
+      // navigate('/browse')
     })
     .catch((error) => {
       const errorCode = error.code;
