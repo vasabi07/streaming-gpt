@@ -35,7 +35,7 @@ const Header = () => {
         alt="logo"
       />
       <div>
-        <button className="m-5 font-bold" onClick={handleSignout}>Signout</button>
+        <button className="m-5 text-white font-bold" onClick={handleSignout}>Signout</button>
       </div>
     </div>
   );

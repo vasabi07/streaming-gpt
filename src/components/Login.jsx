@@ -16,7 +16,6 @@ const Login = () => {
   const HandleSubmit = (e) => {
     const message = LoginValidation(email.current.value,password.current.value);
     setIsErrorMessage(message)
-    console.log(email,password,message);
     if(message) return;
 
     if(!isSignedIn){
