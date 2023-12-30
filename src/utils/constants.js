@@ -6,3 +6,5 @@ export const OPTIONS_NOWPLAYING = {
       Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiMDJjNzVjNWM0YzY5YjgwYzcxMzg4Y2MyYTllMTdkNSIsInN1YiI6IjY1OGFmYjhlYmRkNTY4NWIxMTM4YTJiMSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.3IYNtbqv6LLPSl4kQ3c7094PwXdE-VBn19AV-uaBHGM'
     }
   };
+
+  export const MOVIE_CDN_URL = "https://image.tmdb.org/t/p/w500"
