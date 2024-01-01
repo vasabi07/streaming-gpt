@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addUser, removeUser } from "../utils/userSlice";
 import { LOGO } from "../utils/constants";
+import { showGptSearch } from "../utils/gptSlice";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -28,6 +29,10 @@ const Header = () => {
       }
     });
   },[])
+
+  const handleToggleSearch = ()=>{
+    dispatch(showGptSearch())
+  }
   return (
     <div className=" flex justify-between absolute w-screen bg-gradient-to-b from-black z-50">
       <img className="w-44"
@@ -35,7 +40,8 @@ const Header = () => {
         alt="logo"
       />
       <div>
-        <button className="m-5 text-white font-bold" onClick={handleSignout}>Signout</button>
+      <button className="m-5 p-3 rounded-sm text-white font-bold bg-red-800" onClick={handleToggleSearch}>GptSearch</button>
+        <button className="mr-5 p-3 rounded-sm text-white font-bold  bg-red-800" onClick={handleSignout}>Signout</button>
       </div>
     </div>
   );

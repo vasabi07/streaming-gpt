@@ -4,7 +4,7 @@ import { addNowPlayingMovies } from '../utils/moviesSlice'
 import { useEffect } from 'react';
 
 
-const useNowPlayingMovies = () => {
+const useGptSearch = () => {
     const dispatch = useDispatch();
     const fetchingNowPlaying = async ()=>{
       const data = await fetch('https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1', OPTIONS)
@@ -16,4 +16,4 @@ const useNowPlayingMovies = () => {
     },[])
 }
 
-export default useNowPlayingMovies
+export default useGptSearch
