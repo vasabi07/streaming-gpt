@@ -8,3 +8,4 @@ export const OPTIONS = {
   };
 
   export const MOVIE_CDN_URL = "https://image.tmdb.org/t/p/w500"
+  export const openAI_key = "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"
